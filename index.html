@@ -17,13 +17,62 @@
     body {font-family: "Source Sans Pro"}
     </style>
   </head>
-<body class="w3-light-white w3-margin">
 
+	/* Style the navbar */
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {navFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function navFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 <!-- Navigation bar with links -->
-<div class="w3-bar w3-white w3-text-black">
+<div class="w3-bar w3-white w3-text-black" id="navbar">
   <h2 class="w3-left w3-tag w3-pale-red w3-round">JULIA WANG</h2>
   <a href="#Contact" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">CONTACT</a>
-	<a href="#Art" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">ART</a>
+	<a href="#Artwork" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">ART</a>
 	<a href="#Outreach" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">OUTREACH</a>
   <a href="#Projects" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">PROJECTS</a>
   <a href="#About" class="w3-hide-small w3-bar-item w3-button w3-mobile w3-medium w3-right" style="margin-top:10px;">ABOUT</a>
@@ -37,7 +86,7 @@
   <a href="#About" class="w3-bar-item w3-button">ABOUT</a>
   <a href="#Projects" class="w3-bar-item w3-button">PROJECTS</a>
   <a href="#Outreach" class="w3-bar-item w3-button">OUTREACH</a>
-  <a href="#Art" class="w3-bar-item w3-button">ART</a>
+  <a href="#Artwork" class="w3-bar-item w3-button">ART</a>
   <a href="#Contact" class="w3-bar-item w3-button">CONTACT</a>
 </div>
 
@@ -191,7 +240,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 
 <div class="w3-opacity" id= "Artwork">
-<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span>
 <div class="w3-clear"></div>
 <header class="w3-center w3-margin-bottom">
   <h1><b>ARTWORK</b></h1>
