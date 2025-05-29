@@ -7,7 +7,7 @@ authors:
 - Robert Kwapich
 - Igor Timofeev
 - Tatiana Engel
-date: "in prep"
+date: ""
 doi: ""
 
 # Publication type.
