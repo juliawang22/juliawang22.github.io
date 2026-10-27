@@ -8,6 +8,7 @@ cascade:
       kind: page
     params:
       show_breadcrumb: true
+      hide_date: true
 
 sections:
   - block: collection

@@ -26,7 +26,7 @@ role: Machine Learning Research
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'jhwang242@gmail.com'
+    url: mailto:jhwang242@gmail.com
     label: E-mail Me
   - icon: brands/github
     url: https://github.com/juliawang22
@@ -40,6 +40,56 @@ interests:
   - Computational Neuroscience
   - Biotech
   - Education & Outreach
+
+# Work experience timeline (shown on the Experience page). Leave `date_end` empty for "Present".
+work:
+  - position: Machine Learning Research Scientist
+    company_name: Output Biosciences
+    date_start: 2025-01-01
+    date_end: ''
+    summary: |
+      - Developed end-to-end LLM models for multiple scales of biology, from molecules to proteins.
+      - Worked closely with a team of data scientists, wet-lab biologists, and other machine learning experts.
+  - position: Neuroscience Research Fellow
+    company_name: Albert Einstein College of Medicine, Bronx, NY
+    date_start: 2024-01-01
+    date_end: 2025-01-01
+    summary: |
+      - Trained neuroscience-inspired AI models of communication between brain areas.
+      - Mechanistic interpretation of computer vision models with low-rank optimization.
+  - position: Algorithms Research Intern
+    company_name: Enable Medicine, Menlo Park, CA
+    date_start: 2023-06-01
+    date_end: 2023-08-31
+    summary: |
+      - Applied AI methods to clinical genomics data, working towards drug discovery and patient outcome models at an early-stage startup.
+      - Developed statistical and LLM-based algorithms for analyzing single-cell and spatial transcriptomics and proteomics data.
+  - position: Computational Neuroscience Researcher (PhD)
+    company_name: Cold Spring Harbor Laboratory
+    date_start: 2019-08-01
+    date_end: 2024-01-01
+    summary: |
+      - Invented an unsupervised AI method for neuroscience data to classify sleep states.
+      - Analyzed time-series and spatiotemporal data (EEG, LFP, calcium imaging) and theory for probabilistic deep learning models.
+      - Managed SQL databases, group-wide codebases, and GPU servers; mentored interns and organized coding lectures.
+  - position: Computational Neuroscience Research Intern
+    company_name: Cold Spring Harbor Laboratory
+    date_start: 2018-06-01
+    date_end: 2018-08-31
+    summary: ''
+  - position: Computational Neuroscience Researcher
+    company_name: Stanford University, Stanford, CA
+    date_start: 2017-01-01
+    date_end: 2019-06-01
+    summary: |
+      - Trained and evaluated convolutional neural networks (CNNs) of the retina in TensorFlow and PyTorch.
+  - position: Software Engineering Practicum Intern
+    company_name: Google, Mountain View, CA
+    date_start: 2017-06-01
+    date_end: 2017-09-01
+    summary: |
+      - Systems software engineering for deep learning model evaluation in C++ and Python.
+      - Contributed to a production-scale end-to-end ML platform in TensorFlow Extended (TFX).
 
 education:
   - area: PhD Computational Biology

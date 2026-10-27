@@ -26,7 +26,8 @@ sections:
           # Add your image background to `assets/media/`.
           filename: parallax.jpeg
           filters:
-            brightness: 1.0
+            # Darken the photo so the light text on top stays readable (1.0 = original)
+            brightness: 0.5
           size: cover
           position: center
           parallax: false
