@@ -15,4 +15,5 @@ sections:
       # List filenames here to leave them out of the gallery:
       exclude:
         - parallax.jpeg
+        - icon.png
 ---
