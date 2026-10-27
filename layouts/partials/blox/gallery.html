@@ -1,0 +1,59 @@
+{{/* Custom block: Image Gallery */}}
+{{/* Shows every image in `assets/media/` matching `content.images` as a masonry grid with a click-to-enlarge lightbox. */}}
+{{/* Styles live in `assets/css/custom.css`. */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $pattern := $block.content.images | default "media/*.{jpg,jpeg,png,webp}" }}
+{{ $exclude := $block.content.exclude | default slice }}
+{{ $gallery_id := printf "gallery-%s" (substr (md5 $pattern) 0 8) }}
+
+{{ with $block.content.title }}
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+  <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">{{ . | emojify | $page.RenderString }}</div>
+  {{ with $block.content.text }}<div class="prose prose-slate dark:prose-invert max-w-prose mb-6">{{ . | emojify | $page.RenderString }}</div>{{ end }}
+</div>
+{{ end }}
+
+<div class="gallery" id="{{ $gallery_id }}">
+  {{ range resources.Match $pattern }}
+    {{ if not (in $exclude (path.Base .Name)) }}
+      {{/* Shrink multi-MB phone photos and convert to WebP so the page loads quickly. */}}
+      {{ $thumb := .Resize "800x webp q80" }}
+      {{ $full := .Fit "2000x2000 webp q85" }}
+      <button type="button" class="gallery-item" data-full="{{ $full.RelPermalink }}" aria-label="View larger image">
+        <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="" loading="lazy" decoding="async">
+      </button>
+    {{ end }}
+  {{ end }}
+</div>
+
+<dialog class="gallery-lightbox" id="{{ $gallery_id }}-lightbox" aria-label="Image viewer">
+  <img src="" alt="">
+  <button type="button" class="gallery-close" aria-label="Close">&times;</button>
+  <button type="button" class="gallery-prev" aria-label="Previous image">&lsaquo;</button>
+  <button type="button" class="gallery-next" aria-label="Next image">&rsaquo;</button>
+</dialog>
+
+<script>
+(() => {
+  const items = Array.from(document.querySelectorAll('#{{ $gallery_id }} .gallery-item'));
+  const dialog = document.getElementById('{{ $gallery_id }}-lightbox');
+  const img = dialog.querySelector('img');
+  let current = 0;
+  const show = (i) => {
+    current = (i + items.length) % items.length;
+    img.src = items[current].dataset.full;
+  };
+  items.forEach((item, i) => item.addEventListener('click', () => { show(i); dialog.showModal(); }));
+  dialog.querySelector('.gallery-close').addEventListener('click', () => dialog.close());
+  dialog.querySelector('.gallery-prev').addEventListener('click', () => show(current - 1));
+  dialog.querySelector('.gallery-next').addEventListener('click', () => show(current + 1));
+  dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+  dialog.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+})();
+</script>

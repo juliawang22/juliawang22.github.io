@@ -1,0 +1,98 @@
+/* Custom styles, loaded automatically by the theme after its own CSS. */
+
+/* ---------- Homepage biography: readable text over the photo background ---------- */
+
+#section-resume-biography-3 .resume-biography {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  background: rgba(17, 24, 39, 0.72);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #f3f4f6;
+}
+
+#section-resume-biography-3 .resume-biography .prose {
+  --tw-prose-body: #f3f4f6;
+  --tw-prose-headings: #ffffff;
+  --tw-prose-bold: #ffffff;
+  --tw-prose-links: #ffffff;
+  --tw-prose-bullets: #d1d5db;
+}
+
+#section-resume-biography-3 .portrait-title,
+#section-resume-biography-3 .network-icon,
+#section-resume-biography-3 .network-icon a,
+#section-resume-biography-3 .section-subheading {
+  color: #ffffff;
+}
+
+/* ---------- Artwork gallery ---------- */
+
+.gallery {
+  column-count: 1;
+  column-gap: 1rem;
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+@media (min-width: 640px)  { .gallery { column-count: 2; } }
+@media (min-width: 1024px) { .gallery { column-count: 3; } }
+
+.gallery-item {
+  display: block;
+  margin: 0 0 1rem;
+  break-inside: avoid;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #f3f4f6;
+  cursor: zoom-in;
+  border: 0;
+  padding: 0;
+  width: 100%;
+}
+.dark .gallery-item { background: #1f2937; }
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover img,
+.gallery-item:focus-visible img { transform: scale(1.03); }
+
+.gallery-lightbox {
+  max-width: 95vw;
+  max-height: 95vh;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+.gallery-lightbox::backdrop { background: rgba(0, 0, 0, 0.85); }
+.gallery-lightbox img {
+  display: block;
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 0.5rem;
+}
+.gallery-lightbox button {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 0;
+  border-radius: 9999px;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.gallery-lightbox .gallery-close { top: 1rem; right: 1rem; }
+.gallery-lightbox .gallery-prev  { left: 1rem;  top: 50%; transform: translateY(-50%); }
+.gallery-lightbox .gallery-next  { right: 1rem; top: 50%; transform: translateY(-50%); }
