@@ -9,7 +9,7 @@ authors:
   - The team of Axoft, Inc
 
 
-date: '2025-12-6T00:00:00Z'
+date: '2025-12-06T00:00:00Z'
 doi: ''
 
 # Publication type.
@@ -21,7 +21,8 @@ publication_types: ['paper-conference']
 publication: In *Foundation Models for the Brain and Body*
 publication_short: In *BrainBodyFM*
 
-abstract: Assessing the degree and characteristics of consciousness is central to caring for patients with Disorders of Consciousness (DoC), yet current standard of care is a bedside questionnaire. Using a laminar neural probe we introduce a self-supervised, multi-modal representation learning approach that constructs an interpretable 2-D latent space of brain state from continuous neural recordings. We jointly encode local field potentials (LFPs), single-unit firing rates, and a movement proxy into a time-aware autoregressive VAE (TN-VAE). In rats, pigs and humans undergoing controlled depth anesthesia experiments, the learned latent trajectories nonlinearly, but smoothly, separate four expert-defined states (awake, light, moderate, deep) at 2s resolution, exceeding the temporal granularity of behavioral scoring (15m). The latent space supports linear readout of both coarse state and individual behavioral components, and its axes align with known physiology: delta/alpha power differentiates unconscious sub-states, while gamma and unit firing distinguish wakefulness. To enable cross-species use and incomplete modality sets, we add lightweight, species-specific stitching layers. This model pretrained on tri-modal rat data and fine-tuned with unimodal (LFP) pig data and unimodal human intraoperative data, successfully separates awake versus anesthetized states in new unseen human subjects, demonstrating zero-shot multi-subject transfer without per-patient calibration. The model further generalizes in a multi-task manner to predict the results of additional stimuli. These results highlight a path toward a foundation model for DoC that generalizes across sessions, subjects, species, and stimuli to enable scalable, continuous brain-state monitoring and clinical decision support.
+abstract: >-
+  Assessing the degree and characteristics of consciousness is central to caring for patients with Disorders of Consciousness (DoC), yet current standard of care is a bedside questionnaire. Using a laminar neural probe we introduce a self-supervised, multi-modal representation learning approach that constructs an interpretable 2-D latent space of brain state from continuous neural recordings. We jointly encode local field potentials (LFPs), single-unit firing rates, and a movement proxy into a time-aware autoregressive VAE (TN-VAE). In rats, pigs and humans undergoing controlled depth anesthesia experiments, the learned latent trajectories nonlinearly, but smoothly, separate four expert-defined states (awake, light, moderate, deep) at 2s resolution, exceeding the temporal granularity of behavioral scoring (15m). The latent space supports linear readout of both coarse state and individual behavioral components, and its axes align with known physiology: delta/alpha power differentiates unconscious sub-states, while gamma and unit firing distinguish wakefulness. To enable cross-species use and incomplete modality sets, we add lightweight, species-specific stitching layers. This model pretrained on tri-modal rat data and fine-tuned with unimodal (LFP) pig data and unimodal human intraoperative data, successfully separates awake versus anesthetized states in new unseen human subjects, demonstrating zero-shot multi-subject transfer without per-patient calibration. The model further generalizes in a multi-task manner to predict the results of additional stimuli. These results highlight a path toward a foundation model for DoC that generalizes across sessions, subjects, species, and stimuli to enable scalable, continuous brain-state monitoring and clinical decision support.
 tags:
   - Disorders of Consciousness
 
@@ -43,13 +44,3 @@ image:
   focal_point: ''
   preview_only: false
 ---
-
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
-
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}}
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/).
