@@ -2,15 +2,22 @@
 
 /* ---------- Homepage biography: readable text over the photo background ---------- */
 
-#section-resume-biography-3 .resume-biography {
-  max-width: 72rem;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
+/* Panel only behind the text column, so the photo stays visible around it */
+#section-resume-biography-3 .resume-biography > .flex-auto {
+  padding: 1.5rem 2rem;
   border-radius: 1rem;
-  background: rgba(17, 24, 39, 0.72);
-  -webkit-backdrop-filter: blur(6px);
-  backdrop-filter: blur(6px);
+  background: rgba(17, 24, 39, 0.55);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   color: #f3f4f6;
+}
+
+/* Name, role and icons sit directly on the photo: a soft shadow keeps them legible */
+#section-resume-biography-3 #profile {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+#section-resume-biography-3 .network-icon svg {
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
 }
 
 #section-resume-biography-3 .resume-biography .prose {

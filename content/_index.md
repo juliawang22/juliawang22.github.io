@@ -17,7 +17,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/WangResume2025.pdf
+        url: uploads/WangResume2026.pdf
     design:
       css_class: dark
       background:
@@ -27,18 +27,11 @@ sections:
           filename: parallax.jpeg
           filters:
             # Darken the photo so the light text on top stays readable (1.0 = original)
-            brightness: 0.5
+            brightness: 0.7
           size: cover
           position: center
           parallax: false
-  - block: markdown
-    content:
-      title: 'My Story'
-      subtitle: ''
-      text: |-
         
-    design:
-      columns: '1'
   - block: collection
     id: papers
     content:

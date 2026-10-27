@@ -15,7 +15,7 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Machine Learning Research
+role: Machine Learning and Neuroscience
 
 # Organizations/Affiliations to display in Biography blox
 # organizations:
@@ -43,13 +43,13 @@ interests:
 
 # Work experience timeline (shown on the Experience page). Leave `date_end` empty for "Present".
 work:
-  - position: Machine Learning Research Scientist
-    company_name: Output Biosciences
-    date_start: 2025-01-01
+  - position: NeuroAI Research Scientist
+    company_name: Axoft, Inc.
+    date_start: 2025-06-01
     date_end: ''
     summary: |
-      - Developed end-to-end LLM models for multiple scales of biology, from molecules to proteins.
-      - Worked closely with a team of data scientists, wet-lab biologists, and other machine learning experts.
+      - Led research projects on foundation models of multimodal neural signals for disorders of consciousness.
+      - Analyzed large-scale neural data such as LFP and spike signals and developed reproducible data processing pipelines.
   - position: Neuroscience Research Fellow
     company_name: Albert Einstein College of Medicine, Bronx, NY
     date_start: 2024-01-01
